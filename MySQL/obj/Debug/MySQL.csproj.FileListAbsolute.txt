@@ -1,0 +1,15 @@
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySQL.dll.config
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySQL.dll
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySQL.pdb
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\EntityFramework.dll
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\EntityFramework.SqlServer.dll
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySql.Data.dll
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\EntityFramework.xml
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\EntityFramework.SqlServer.xml
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySql.Data.xml
+E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySql.Data.Entity.EF6.xml
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csprojResolveAssemblyReference.cache
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csproj.CoreCompileInputs.cache
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.dll
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.pdb
