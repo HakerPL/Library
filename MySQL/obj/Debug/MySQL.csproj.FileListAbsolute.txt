@@ -13,3 +13,5 @@ E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csprojResolveAssemblyReference.
 E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csproj.CoreCompileInputs.cache
 E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.dll
 E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.pdb
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.Migrations._int.resources
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csproj.GenerateResource.Cache

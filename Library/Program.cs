@@ -3,7 +3,8 @@ using System.Windows.Forms;
 using Autofac;
 using DiAutofac;
 using MySQL;
-using Repositories.Repositories;
+using MySQL.Repositories;
+using View.Library;
 
 namespace Library
 {
@@ -25,7 +26,7 @@ namespace Library
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainView());
         }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Autofac;
+﻿using Autofac;
 using MySQL;
-using Repositories.Repositories;
+using MySQL.Repositories;
 
 namespace DiAutofac
 {

@@ -20,6 +20,8 @@ namespace MySQL.Entities
 
         public string Title { get; set; }
 
+        public string Isbn { get; set; }
+
         public TYPE Type { get; set; }
 
         public DateTime ReleaseDate { get; set; }

@@ -48,14 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,24 +91,10 @@
       <Project>{a51bffce-4de1-4059-9723-34469482b0aa}</Project>
       <Name>MySQL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositories\Repositories.csproj">
-      <Project>{41549103-c327-4518-be82-329f5bc44d27}</Project>
-      <Name>Repositories</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AuthorView\Model\" />
-    <Folder Include="AuthorView\ViewModel\" />
-    <Folder Include="AuthorView\View\" />
-    <Folder Include="BookView\Model\" />
-    <Folder Include="BookView\ViewModel\" />
-    <Folder Include="BookView\View\" />
-    <Folder Include="MainView\Model\" />
-    <Folder Include="MainView\ViewModel\" />
-    <Folder Include="MainView\View\" />
-    <Folder Include="ReaderView\Model\" />
-    <Folder Include="ReaderView\ViewModel\" />
-    <Folder Include="ReaderView\View\" />
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

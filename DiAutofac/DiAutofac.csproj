@@ -54,10 +54,6 @@
       <Project>{a51bffce-4de1-4059-9723-34469482b0aa}</Project>
       <Name>MySQL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositories\Repositories.csproj">
-      <Project>{41549103-c327-4518-be82-329f5bc44d27}</Project>
-      <Name>Repositories</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

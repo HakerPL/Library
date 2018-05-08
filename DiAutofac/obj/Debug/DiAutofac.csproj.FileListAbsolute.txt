@@ -2,14 +2,11 @@ E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\DiAutofac.dll
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\DiAutofac.pdb
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\Autofac.dll
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\MySQL.dll
-E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\Repositories.dll
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\MySql.Data.Entity.EF6.dll
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\EntityFramework.dll
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\MySql.Data.dll
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\MySQL.pdb
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\MySQL.dll.config
-E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\Repositories.pdb
-E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\Repositories.dll.config
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\Autofac.xml
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\MySql.Data.Entity.EF6.xml
 E:\MojeProgramy\C#\Library\DiAutofac\bin\Debug\EntityFramework.xml
