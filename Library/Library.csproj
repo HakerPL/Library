@@ -48,6 +48,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\AuthorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\AuthorView.Designer.cs">
+      <DependentUpon>AuthorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReadersViews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ReadersViews.Designer.cs">
+      <DependentUpon>ReadersViews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HistoryBooksViews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HistoryBooksViews.Designer.cs">
+      <DependentUpon>HistoryBooksViews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BooksViews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\BooksViews.Designer.cs">
+      <DependentUpon>BooksViews.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +81,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\AuthorView.resx">
+      <DependentUpon>AuthorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReadersViews.resx">
+      <DependentUpon>ReadersViews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HistoryBooksViews.resx">
+      <DependentUpon>HistoryBooksViews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BooksViews.resx">
+      <DependentUpon>BooksViews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

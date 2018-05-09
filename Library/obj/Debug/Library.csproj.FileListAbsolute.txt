@@ -21,3 +21,7 @@ E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.csproj.CoreCompileInputs.ca
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.exe
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.pdb
 E:\MojeProgramy\C#\Library\Library\obj\Debug\View.Library.MainView.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AuthorView.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.ReadersViews.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.HistoryBooksViews.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.BooksViews.resources

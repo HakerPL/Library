@@ -18,9 +18,9 @@ namespace MySQL.Repositories
             _connectDb.SaveChanges();
         }
 
-        public BookHistory Get(int id)
+        public List<BookHistory> Get(int bookId)
         {
-            return _connectDb.BookHistory.FirstOrDefault(u => u.Id == id);
+            return _connectDb.BookHistory.Where(u => u.BookId == bookId).ToList();
         }
 
         public List<BookHistory> GetAll()

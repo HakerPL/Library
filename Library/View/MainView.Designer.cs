@@ -1,4 +1,4 @@
-﻿namespace View.Library
+﻿namespace Library.View
 {
     partial class MainView
     {
@@ -54,6 +54,7 @@
             this.btnBooks.TabIndex = 1;
             this.btnBooks.Text = "Books";
             this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // btnHistoryBooks
             // 
@@ -63,6 +64,7 @@
             this.btnHistoryBooks.TabIndex = 2;
             this.btnHistoryBooks.Text = "History Book";
             this.btnHistoryBooks.UseVisualStyleBackColor = true;
+            this.btnHistoryBooks.Click += new System.EventHandler(this.btnHistoryBooks_Click);
             // 
             // btnReaders
             // 
@@ -72,6 +74,7 @@
             this.btnReaders.TabIndex = 3;
             this.btnReaders.Text = "Readers";
             this.btnReaders.UseVisualStyleBackColor = true;
+            this.btnReaders.Click += new System.EventHandler(this.btnReaders_Click);
             // 
             // btnAuthors
             // 
@@ -81,6 +84,7 @@
             this.btnAuthors.TabIndex = 4;
             this.btnAuthors.Text = "Authors";
             this.btnAuthors.UseVisualStyleBackColor = true;
+            this.btnAuthors.Click += new System.EventHandler(this.btnAuthors_Click);
             // 
             // MainView
             // 

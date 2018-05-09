@@ -2,9 +2,9 @@
 using System.Windows.Forms;
 using Autofac;
 using DiAutofac;
+using Library.View;
 using MySQL;
 using MySQL.Repositories;
-using View.Library;
 
 namespace Library
 {
