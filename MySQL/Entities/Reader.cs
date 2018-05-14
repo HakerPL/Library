@@ -14,6 +14,6 @@ namespace MySQL.Entities
 
         public string Surname { get; set; }
 
-        public DateTime BornDateTime { get; set; }
+        public DateTime BornDate { get; set; }
     }
 }

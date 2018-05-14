@@ -1,6 +1,6 @@
 ﻿namespace Library.View
 {
-    partial class HistoryBooksViews
+    partial class HistoryBookViews
     {
         /// <summary> 
         /// Required designer variable.

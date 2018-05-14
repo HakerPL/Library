@@ -30,10 +30,11 @@ namespace MySQL.Repositories
 
         public void Save(Reader item)
         {
-            if (_connectDb.Reader.FirstOrDefault(u => u.Id == item.Id) != null)
-                _connectDb.Reader.Attach(item);
-            else
+            Reader checkClient = _connectDb.Reader.FirstOrDefault(u => u.Id == item.Id);
+            if (checkClient == null)
                 _connectDb.Reader.Add(item);
+            else
+                _connectDb.Entry(checkClient).CurrentValues.SetValues(item);
 
             _connectDb.SaveChanges();
         }

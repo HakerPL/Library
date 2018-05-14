@@ -1,6 +1,6 @@
 ﻿namespace Library.View
 {
-    partial class AuthorView
+    partial class AllAuthorView
     {
         /// <summary> 
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Library.View
 {
-    partial class BooksViews
+    partial class AllBooksViews
     {
         /// <summary> 
         /// Required designer variable.

@@ -9,9 +9,8 @@ E:\MojeProgramy\C#\Library\MySQL\bin\Debug\EntityFramework.xml
 E:\MojeProgramy\C#\Library\MySQL\bin\Debug\EntityFramework.SqlServer.xml
 E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySql.Data.xml
 E:\MojeProgramy\C#\Library\MySQL\bin\Debug\MySql.Data.Entity.EF6.xml
-E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csprojResolveAssemblyReference.cache
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.Migrations.init.resources
+E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csproj.GenerateResource.Cache
 E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csproj.CoreCompileInputs.cache
 E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.dll
 E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.pdb
-E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.Migrations._int.resources
-E:\MojeProgramy\C#\Library\MySQL\obj\Debug\MySQL.csproj.GenerateResource.Cache

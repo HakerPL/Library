@@ -48,30 +48,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICommand.cs" />
+    <Compile Include="Services\FiltrReaders.cs" />
+    <Compile Include="ViewModel\Commands\RemoveAuthorCommand.cs" />
+    <Compile Include="ViewModel\Commands\RemoveBookCommand.cs" />
+    <Compile Include="ViewModel\Commands\RemoveReaderCommand.cs" />
+    <Compile Include="ViewModel\Commands\SaveAuthorCommand.cs" />
+    <Compile Include="ViewModel\Commands\SaveBookCommand.cs" />
+    <Compile Include="ViewModel\Commands\SaveReaderCommand.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="View\AuthorView.cs">
+    <Compile Include="View\AllAuthorView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\AuthorView.Designer.cs">
-      <DependentUpon>AuthorView.cs</DependentUpon>
+    <Compile Include="View\AllAuthorView.Designer.cs">
+      <DependentUpon>AllAuthorView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ReadersViews.cs">
+    <Compile Include="View\AllReadersViews.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\ReadersViews.Designer.cs">
-      <DependentUpon>ReadersViews.cs</DependentUpon>
+    <Compile Include="View\AllReadersViews.Designer.cs">
+      <DependentUpon>AllReadersViews.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\HistoryBooksViews.cs">
+    <Compile Include="View\HistoryBookViews.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\HistoryBooksViews.Designer.cs">
-      <DependentUpon>HistoryBooksViews.cs</DependentUpon>
+    <Compile Include="View\HistoryBookViews.Designer.cs">
+      <DependentUpon>HistoryBookViews.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BooksViews.cs">
+    <Compile Include="View\AllBooksViews.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\BooksViews.Designer.cs">
-      <DependentUpon>BooksViews.cs</DependentUpon>
+    <Compile Include="View\AllBooksViews.Designer.cs">
+      <DependentUpon>AllBooksViews.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
@@ -81,17 +89,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\AuthorView.resx">
-      <DependentUpon>AuthorView.cs</DependentUpon>
+    <Compile Include="View\ReaderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ReaderView.Designer.cs">
+      <DependentUpon>ReaderView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AllAuthorView.resx">
+      <DependentUpon>AllAuthorView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ReadersViews.resx">
-      <DependentUpon>ReadersViews.cs</DependentUpon>
+    <EmbeddedResource Include="View\AllReadersViews.resx">
+      <DependentUpon>AllReadersViews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\HistoryBooksViews.resx">
-      <DependentUpon>HistoryBooksViews.cs</DependentUpon>
+    <EmbeddedResource Include="View\HistoryBookViews.resx">
+      <DependentUpon>HistoryBookViews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\BooksViews.resx">
-      <DependentUpon>BooksViews.cs</DependentUpon>
+    <EmbeddedResource Include="View\AllBooksViews.resx">
+      <DependentUpon>AllBooksViews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
@@ -105,6 +119,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\ReaderView.resx">
+      <DependentUpon>ReaderView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

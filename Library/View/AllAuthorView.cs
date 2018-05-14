@@ -3,11 +3,11 @@ using Library.ViewModel;
 
 namespace Library.View
 {
-    public partial class HistoryBooksViews : UserControl
+    public partial class AllAuthorView : UserControl
     {
         private readonly MainViewModel _mainViewModel;
 
-        public HistoryBooksViews(MainViewModel mainViewModel)
+        public AllAuthorView(MainViewModel mainViewModel)
         {
             InitializeComponent();
 

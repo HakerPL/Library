@@ -1,14 +1,15 @@
 ﻿using System.Windows.Forms;
 using Library.ViewModel;
+using MySQL.Entities;
 
 namespace Library.View
 {
     public partial class MainView : Form
     {
-        private AuthorView _authorView;
-        private BooksViews _booksViews;
-        private HistoryBooksViews _historyBooksViews;
-        private ReadersViews _readersViews;
+        private AllAuthorView _authorView;
+        private AllBooksViews _booksViews;
+        private HistoryBookViews _historyBooksViews;
+        private AllReadersViews _readersViews;
 
         private readonly MainViewModel _mainViewModel;
 
@@ -62,10 +63,10 @@ namespace Library.View
 
         private void CreateControls()
         {
-            _authorView = new AuthorView(_mainViewModel);
-            _booksViews = new BooksViews(_mainViewModel);
-            _historyBooksViews = new HistoryBooksViews(_mainViewModel);
-            _readersViews = new ReadersViews(_mainViewModel);
+            _authorView = new AllAuthorView(_mainViewModel);
+            _booksViews = new AllBooksViews(_mainViewModel);
+            _historyBooksViews = new HistoryBookViews(_mainViewModel);
+            _readersViews = new AllReadersViews(_mainViewModel);
 
             _authorView.Dock = DockStyle.Fill;
             _booksViews.Dock = DockStyle.Fill;

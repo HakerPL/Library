@@ -36,6 +36,20 @@ namespace MySQL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            //modelBuilder.Entity<Client>()
+            //    .HasOptional(e => e.ClientStudent)
+            //    .WithRequired(e => e.Client);
+
+            //modelBuilder.Entity<Client>()
+            //    .HasMany(e => e.ClientsCompany)
+            //    .WithOptional(e => e.ClientCompany)
+            //    .HasForeignKey(e => e.ClientCompanyId);
+
+            //modelBuilder.Entity<Client>()
+            //    .HasMany(e => e.ClientsNew)
+            //    .WithOptional(e => e.ClientNew)
+            //    .HasForeignKey(e => e.ClientCompanyId);
         }
 
         public virtual DbSet<Author> Author { get; set; }

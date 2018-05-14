@@ -3,7 +3,7 @@ namespace MySQL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _int : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -14,7 +14,7 @@ namespace MySQL.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(unicode: false),
                         Surname = c.String(unicode: false),
-                        BornDateTime = c.DateTime(nullable: false, precision: 0),
+                        BornDate = c.DateTime(nullable: false, precision: 0),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -24,9 +24,10 @@ namespace MySQL.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(unicode: false),
+                        Isbn = c.String(unicode: false),
                         Type = c.Int(nullable: false),
                         ReleaseDate = c.DateTime(nullable: false, precision: 0),
-                        Borrowed = c.Boolean(nullable: false, defaultValue: false),
+                        Borrowed = c.Boolean(nullable: false),
                         AuthorId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
@@ -53,7 +54,7 @@ namespace MySQL.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(unicode: false),
                         Surname = c.String(unicode: false),
-                        BornDateTime = c.DateTime(nullable: false, precision: 0),
+                        BornDate = c.DateTime(nullable: false, precision: 0),
                     })
                 .PrimaryKey(t => t.Id);
             
