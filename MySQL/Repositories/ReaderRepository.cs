@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using MySQL.Entities;
 
@@ -30,11 +31,10 @@ namespace MySQL.Repositories
 
         public void Save(Reader item)
         {
-            Reader checkClient = _connectDb.Reader.FirstOrDefault(u => u.Id == item.Id);
-            if (checkClient == null)
+            if (item.Id == 0)
                 _connectDb.Reader.Add(item);
             else
-                _connectDb.Entry(checkClient).CurrentValues.SetValues(item);
+                _connectDb.Entry(item).State = EntityState.Modified;
 
             _connectDb.SaveChanges();
         }

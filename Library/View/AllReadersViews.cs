@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
 using System.Windows.Forms;
 using Library.Services;
 using Library.ViewModel;
@@ -39,7 +37,7 @@ namespace Library.View
         {
             _mainViewModel.CourrnetReader = new Reader();
 
-            if (!ShovReaderView())
+            if (!ShowReaderView())
                 return;
 
             _mainViewModel.SaveReader.Execute(null);
@@ -53,7 +51,7 @@ namespace Library.View
 
             _mainViewModel.CourrnetReader = courrent;
 
-            if (!ShovReaderView())
+            if (!ShowReaderView())
                 return;
 
             _mainViewModel.SaveReader.Execute(null);
@@ -74,7 +72,7 @@ namespace Library.View
         /// 
         /// </summary>
         /// <returns>DialogResoult</returns> return 
-        private bool ShovReaderView()
+        private bool ShowReaderView()
         {
             ReaderView fm = new ReaderView(_mainViewModel);
             if (fm.ShowDialog() == DialogResult.Cancel)
@@ -96,9 +94,9 @@ namespace Library.View
             List<Reader> list;
 
             if (cbSearchOptions.SelectedIndex == 0)
-                list = _mainViewModel.FiltrReader(FiltrReader.NAME, tbSearchReader.Text);
+                list = _mainViewModel.FiltrReader(FiltrReaderMethod.NAME, tbSearchReader.Text);
             else
-                list = _mainViewModel.FiltrReader(FiltrReader.SURNAME, tbSearchReader.Text);
+                list = _mainViewModel.FiltrReader(FiltrReaderMethod.SURNAME, tbSearchReader.Text);
 
             _readerBinding.DataSource = list;
             dgvReaders.Refresh();

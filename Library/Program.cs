@@ -18,12 +18,6 @@ namespace Library
         {
             DiContainer.Build();
 
-
-            DiContainer.Container.Resolve<ConnectDb>();
-            DiContainer.Container.Resolve<AuthorRepository>();
-
-
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainView());

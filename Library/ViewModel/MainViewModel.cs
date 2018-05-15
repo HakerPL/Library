@@ -120,13 +120,13 @@ namespace Library.ViewModel
             }
         }
 
-        public TYPE CourrnetBookType
+        public int CourrnetBookBookType
         {
-            get => _courrentBook.Type;
+            get => (int)_courrentBook.BookType;
             set
             {
-                _courrentBook.Type = value;
-                OnPropertyChanged(nameof(CourrnetBookType));
+                _courrentBook.BookType = (BookType)value;
+                OnPropertyChanged(nameof(CourrnetBookBookType));
             }
         }
 
@@ -164,6 +164,7 @@ namespace Library.ViewModel
 
 
         #region Reader Commands
+
         private ICommand _saveReader;
         public ICommand SaveReader => _saveReader ?? (_saveReader = new SaveReaderCommand(this));
 
@@ -173,29 +174,43 @@ namespace Library.ViewModel
         #endregion
 
         #region Author Commands
+
         private ICommand _saveAuthor;
         public ICommand SaveAuthor => _saveAuthor ?? (_saveAuthor = new SaveAuthorCommand(this));
+
+        private ICommand _removeAuthor;
+        public ICommand RemoveAuthor => _removeAuthor ?? (_removeAuthor = new RemoveAuthorCommand(this));
 
         #endregion
 
         #region Book Commands
+
         private ICommand _saveBook;
         public ICommand SaveBook => _saveBook ?? (_saveBook = new SaveBookCommand(this));
+
+        private ICommand _removeBook;
+        public ICommand RemoveBook => _removeBook ?? (_removeBook = new RemoveBookCommand(this));
 
         #endregion
 
 
-
-        public MainViewModel()
-        {
-
-        }
+        public MainViewModel(){}
 
         #region Filtr
 
-        public List<Reader> FiltrReader(FiltrReader filtrMethod, string filtr)
+        public List<Reader> FiltrReader(FiltrReaderMethod filtrMethod, string filtr)
         {
-            return FiltrReaders.FiltReaders(GetAllReaders(), filtrMethod, filtr);
+            return FiltrReaders.Filtr(GetAllReaders(), filtrMethod, filtr);
+        }
+
+        public List<Author> FiltrAuthor(FiltrAuthorMethod filtrMethod, string filtr)
+        {
+            return FiltrAuthors.Filtr(GetAllAuthors(), filtrMethod, filtr);
+        }
+
+        public List<Book> FiltrBook(FiltrBookMethod filtrMethod, string filtr)
+        {
+            return FiltrBooks.Filtr(GetAllBooks(), filtrMethod, filtr);
         }
 
         #endregion

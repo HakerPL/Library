@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Autofac;
+using DiAutofac;
+using MySQL.Repositories;
 
 namespace Library.ViewModel.Commands
 {
     class RemoveBookCommand : ICommand
     {
-        private MainViewModel _mainViewModel;
+        private readonly MainViewModel _mainViewModel;
 
         public RemoveBookCommand(MainViewModel mainViewModel)
         {
@@ -17,7 +15,7 @@ namespace Library.ViewModel.Commands
 
         public void Execute(object sender)
         {
-            throw new NotImplementedException();
+            DiContainer.Container.Resolve<BookRepository>().Delete(_mainViewModel.CourrnetBook);
         }
     }
 }

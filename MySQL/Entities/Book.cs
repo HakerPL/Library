@@ -1,10 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MySQL.Entities
 {
-    public enum TYPE
+    public enum BookType
     {
         SCI_FI,
         COMEDY,
@@ -22,11 +23,11 @@ namespace MySQL.Entities
 
         public string Isbn { get; set; }
 
-        public TYPE Type { get; set; }
+        public BookType BookType { get; set; }
 
         public DateTime ReleaseDate { get; set; }
 
-        public bool Borrowed { get; set; }
+        public bool Borrowed { get; set; } = false;
 
         [ForeignKey("Author")]
         public int AuthorId { get; set; }

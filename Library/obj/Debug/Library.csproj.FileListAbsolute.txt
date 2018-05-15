@@ -26,3 +26,5 @@ E:\MojeProgramy\C#\Library\Library\bin\Debug\EntityFramework.xml
 E:\MojeProgramy\C#\Library\Library\bin\Debug\MySql.Data.xml
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.exe
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.pdb
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AuthorView.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.BookView.resources

@@ -4,24 +4,24 @@ using MySQL.Entities;
 
 namespace Library.Services
 {
-    public enum FiltrReaderMethod
+    public enum FiltrAuthorMethod
     {
         NAME,
         SURNAME
     }
-    public class FiltrReaders
+    public class FiltrAuthors
     {
-        public static List<Reader> Filtr(List<Reader> sourceList, FiltrReaderMethod filtrMethod, string filtr)
+        public static List<Author> Filtr(List<Author> sourceList, FiltrAuthorMethod filtrMethod, string filtr)
         {
-            List<Reader> list = new List<Reader>();
+            List<Author> list = new List<Author>();
 
             switch (filtrMethod)
             {
-                case FiltrReaderMethod.NAME:
+                case FiltrAuthorMethod.NAME:
                     list = sourceList.Where(r => r.Name.Contains(filtr)).ToList();
                     break;
 
-                case FiltrReaderMethod.SURNAME:
+                case FiltrAuthorMethod.SURNAME:
                     list = sourceList.Where(r => r.Surname.Contains(filtr)).ToList();
                     break;
             }

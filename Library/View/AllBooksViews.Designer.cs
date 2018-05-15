@@ -38,19 +38,34 @@
             this.cbSearchOptions = new System.Windows.Forms.ComboBox();
             this.lblSelectSearch = new System.Windows.Forms.Label();
             this.btnShowAllBooks = new System.Windows.Forms.Button();
+            this.cbTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbIsbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbReleaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBorrowed = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBooks
             // 
+            this.dgvBooks.AllowUserToAddRows = false;
+            this.dgvBooks.AllowUserToDeleteRows = false;
             this.dgvBooks.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cbTitle,
+            this.cbIsbn,
+            this.cbBookType,
+            this.cbReleaseDate,
+            this.cbBorrowed});
             this.dgvBooks.Location = new System.Drawing.Point(144, 3);
             this.dgvBooks.Name = "dgvBooks";
+            this.dgvBooks.ReadOnly = true;
             this.dgvBooks.Size = new System.Drawing.Size(573, 388);
             this.dgvBooks.TabIndex = 0;
+            this.dgvBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellContentClick);
             // 
             // btnAddBook
             // 
@@ -60,6 +75,7 @@
             this.btnAddBook.TabIndex = 1;
             this.btnAddBook.Text = "Add";
             this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // btnEditBook
             // 
@@ -69,6 +85,7 @@
             this.btnEditBook.TabIndex = 2;
             this.btnEditBook.Text = "Edit";
             this.btnEditBook.UseVisualStyleBackColor = true;
+            this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
             // 
             // btnRemoveBook
             // 
@@ -78,6 +95,7 @@
             this.btnRemoveBook.TabIndex = 3;
             this.btnRemoveBook.Text = "Remove";
             this.btnRemoveBook.UseVisualStyleBackColor = true;
+            this.btnRemoveBook.Click += new System.EventHandler(this.btnRemoveBook_Click);
             // 
             // btnSearchBook
             // 
@@ -87,6 +105,7 @@
             this.btnSearchBook.TabIndex = 4;
             this.btnSearchBook.Text = "Search";
             this.btnSearchBook.UseVisualStyleBackColor = true;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
             // 
             // tbSearchBook
             // 
@@ -107,6 +126,9 @@
             // cbSearchOptions
             // 
             this.cbSearchOptions.FormattingEnabled = true;
+            this.cbSearchOptions.Items.AddRange(new object[] {
+            "Title",
+            "ISBN"});
             this.cbSearchOptions.Location = new System.Drawing.Point(3, 46);
             this.cbSearchOptions.Name = "cbSearchOptions";
             this.cbSearchOptions.Size = new System.Drawing.Size(135, 21);
@@ -129,8 +151,49 @@
             this.btnShowAllBooks.TabIndex = 9;
             this.btnShowAllBooks.Text = "Show all books";
             this.btnShowAllBooks.UseVisualStyleBackColor = true;
+            this.btnShowAllBooks.Click += new System.EventHandler(this.btnShowAllBooks_Click);
             // 
-            // BooksViews
+            // cbTitle
+            // 
+            this.cbTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbTitle.DataPropertyName = "Title";
+            this.cbTitle.HeaderText = "Title";
+            this.cbTitle.Name = "cbTitle";
+            this.cbTitle.ReadOnly = true;
+            // 
+            // cbIsbn
+            // 
+            this.cbIsbn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbIsbn.DataPropertyName = "Isbn";
+            this.cbIsbn.HeaderText = "ISBN";
+            this.cbIsbn.Name = "cbIsbn";
+            this.cbIsbn.ReadOnly = true;
+            // 
+            // cbBookType
+            // 
+            this.cbBookType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbBookType.DataPropertyName = "BookType";
+            this.cbBookType.HeaderText = "Book type";
+            this.cbBookType.Name = "cbBookType";
+            this.cbBookType.ReadOnly = true;
+            // 
+            // cbReleaseDate
+            // 
+            this.cbReleaseDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbReleaseDate.DataPropertyName = "ReleaseDate";
+            this.cbReleaseDate.HeaderText = "Release date";
+            this.cbReleaseDate.Name = "cbReleaseDate";
+            this.cbReleaseDate.ReadOnly = true;
+            // 
+            // cbBorrowed
+            // 
+            this.cbBorrowed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cbBorrowed.DataPropertyName = "Borrowed";
+            this.cbBorrowed.HeaderText = "Borrowed";
+            this.cbBorrowed.Name = "cbBorrowed";
+            this.cbBorrowed.ReadOnly = true;
+            // 
+            // AllBooksViews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +207,7 @@
             this.Controls.Add(this.btnEditBook);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.dgvBooks);
-            this.Name = "BooksViews";
+            this.Name = "AllBooksViews";
             this.Size = new System.Drawing.Size(720, 394);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
             this.ResumeLayout(false);
@@ -164,5 +227,10 @@
         private System.Windows.Forms.ComboBox cbSearchOptions;
         private System.Windows.Forms.Label lblSelectSearch;
         private System.Windows.Forms.Button btnShowAllBooks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbIsbn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbBookType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbReleaseDate;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn cbBorrowed;
     }
 }
