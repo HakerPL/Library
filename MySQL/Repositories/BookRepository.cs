@@ -36,6 +36,9 @@ namespace MySQL.Repositories
             else
                 _connectDb.Entry(item).State = EntityState.Modified;
 
+            if(item.Author.Id == 0)
+                _connectDb.Author.Add(item.Author);
+
             _connectDb.SaveChanges();
         }
     }

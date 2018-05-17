@@ -1,13 +1,13 @@
 ﻿namespace Library.View
 {
-    partial class AllAuthorView
+    partial class AssignAuthorToBook
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,74 +20,35 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddAuthor = new System.Windows.Forms.Button();
-            this.btnEditAuthor = new System.Windows.Forms.Button();
-            this.btnRemoveAuthor = new System.Windows.Forms.Button();
-            this.tbSearchAuthor = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.cbSearchOptions = new System.Windows.Forms.ComboBox();
             this.lblSelectSearch = new System.Windows.Forms.Label();
+            this.cbSearchOptions = new System.Windows.Forms.ComboBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.tbSearchAuthor = new System.Windows.Forms.TextBox();
+            this.btnAddAuthor = new System.Windows.Forms.Button();
             this.dgvAuthors = new System.Windows.Forms.DataGridView();
             this.cbName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbBornDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthors)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAddAuthor
+            // lblSelectSearch
             // 
-            this.btnAddAuthor.Location = new System.Drawing.Point(3, 308);
-            this.btnAddAuthor.Name = "btnAddAuthor";
-            this.btnAddAuthor.Size = new System.Drawing.Size(135, 23);
-            this.btnAddAuthor.TabIndex = 1;
-            this.btnAddAuthor.Text = "Add";
-            this.btnAddAuthor.UseVisualStyleBackColor = true;
-            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
-            // 
-            // btnEditAuthor
-            // 
-            this.btnEditAuthor.Location = new System.Drawing.Point(3, 337);
-            this.btnEditAuthor.Name = "btnEditAuthor";
-            this.btnEditAuthor.Size = new System.Drawing.Size(135, 23);
-            this.btnEditAuthor.TabIndex = 2;
-            this.btnEditAuthor.Text = "Edit";
-            this.btnEditAuthor.UseVisualStyleBackColor = true;
-            this.btnEditAuthor.Click += new System.EventHandler(this.btnEditAuthor_Click);
-            // 
-            // btnRemoveAuthor
-            // 
-            this.btnRemoveAuthor.Location = new System.Drawing.Point(3, 366);
-            this.btnRemoveAuthor.Name = "btnRemoveAuthor";
-            this.btnRemoveAuthor.Size = new System.Drawing.Size(135, 23);
-            this.btnRemoveAuthor.TabIndex = 3;
-            this.btnRemoveAuthor.Text = "Remove";
-            this.btnRemoveAuthor.UseVisualStyleBackColor = true;
-            this.btnRemoveAuthor.Click += new System.EventHandler(this.btnRemoveAuthor_Click);
-            // 
-            // tbSearchAuthor
-            // 
-            this.tbSearchAuthor.Location = new System.Drawing.Point(3, 86);
-            this.tbSearchAuthor.Name = "tbSearchAuthor";
-            this.tbSearchAuthor.Size = new System.Drawing.Size(135, 20);
-            this.tbSearchAuthor.TabIndex = 5;
-            this.tbSearchAuthor.TextChanged += new System.EventHandler(this.tbSearchAuthor_TextChanged);
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(3, 70);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(41, 13);
-            this.lblSearch.TabIndex = 6;
-            this.lblSearch.Text = "Search";
+            this.lblSelectSearch.AutoSize = true;
+            this.lblSelectSearch.Location = new System.Drawing.Point(12, 9);
+            this.lblSelectSearch.Name = "lblSelectSearch";
+            this.lblSelectSearch.Size = new System.Drawing.Size(65, 13);
+            this.lblSelectSearch.TabIndex = 18;
+            this.lblSelectSearch.Text = "Search after";
             // 
             // cbSearchOptions
             // 
@@ -95,19 +56,37 @@
             this.cbSearchOptions.Items.AddRange(new object[] {
             "Name",
             "Surname"});
-            this.cbSearchOptions.Location = new System.Drawing.Point(3, 46);
+            this.cbSearchOptions.Location = new System.Drawing.Point(12, 25);
             this.cbSearchOptions.Name = "cbSearchOptions";
             this.cbSearchOptions.Size = new System.Drawing.Size(135, 21);
-            this.cbSearchOptions.TabIndex = 7;
+            this.cbSearchOptions.TabIndex = 17;
             // 
-            // lblSelectSearch
+            // lblSearch
             // 
-            this.lblSelectSearch.AutoSize = true;
-            this.lblSelectSearch.Location = new System.Drawing.Point(3, 30);
-            this.lblSelectSearch.Name = "lblSelectSearch";
-            this.lblSelectSearch.Size = new System.Drawing.Size(65, 13);
-            this.lblSelectSearch.TabIndex = 8;
-            this.lblSelectSearch.Text = "Search after";
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(163, 9);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.TabIndex = 16;
+            this.lblSearch.Text = "Search";
+            // 
+            // tbSearchAuthor
+            // 
+            this.tbSearchAuthor.Location = new System.Drawing.Point(163, 25);
+            this.tbSearchAuthor.Name = "tbSearchAuthor";
+            this.tbSearchAuthor.Size = new System.Drawing.Size(135, 20);
+            this.tbSearchAuthor.TabIndex = 15;
+            this.tbSearchAuthor.TextChanged += new System.EventHandler(this.tbSearchAuthor_TextChanged);
+            // 
+            // btnAddAuthor
+            // 
+            this.btnAddAuthor.Location = new System.Drawing.Point(12, 437);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(135, 23);
+            this.btnAddAuthor.TabIndex = 11;
+            this.btnAddAuthor.Text = "Add New Author";
+            this.btnAddAuthor.UseVisualStyleBackColor = true;
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
             // dgvAuthors
             // 
@@ -121,13 +100,13 @@
             this.cbName,
             this.cbSurname,
             this.cbBornDate});
-            this.dgvAuthors.Location = new System.Drawing.Point(147, 3);
+            this.dgvAuthors.Location = new System.Drawing.Point(12, 52);
             this.dgvAuthors.MultiSelect = false;
             this.dgvAuthors.Name = "dgvAuthors";
             this.dgvAuthors.ReadOnly = true;
             this.dgvAuthors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAuthors.Size = new System.Drawing.Size(573, 388);
-            this.dgvAuthors.TabIndex = 10;
+            this.dgvAuthors.Size = new System.Drawing.Size(602, 379);
+            this.dgvAuthors.TabIndex = 21;
             this.dgvAuthors.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthors_CellDoubleClick);
             // 
             // cbName
@@ -154,20 +133,31 @@
             this.cbBornDate.Name = "cbBornDate";
             this.cbBornDate.ReadOnly = true;
             // 
-            // AllAuthorView
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(479, 437);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(135, 23);
+            this.btnCancel.TabIndex = 22;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // AssignAuthorToBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(625, 471);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dgvAuthors);
             this.Controls.Add(this.lblSelectSearch);
             this.Controls.Add(this.cbSearchOptions);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbSearchAuthor);
-            this.Controls.Add(this.btnRemoveAuthor);
-            this.Controls.Add(this.btnEditAuthor);
             this.Controls.Add(this.btnAddAuthor);
-            this.Name = "AllAuthorView";
-            this.Size = new System.Drawing.Size(720, 394);
+            this.Name = "AssignAuthorToBook";
+            this.ShowIcon = false;
+            this.Text = "Assign Author";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,16 +165,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAddAuthor;
-        private System.Windows.Forms.Button btnEditAuthor;
-        private System.Windows.Forms.Button btnRemoveAuthor;
-        private System.Windows.Forms.TextBox tbSearchAuthor;
-        private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.ComboBox cbSearchOptions;
+
         private System.Windows.Forms.Label lblSelectSearch;
+        private System.Windows.Forms.ComboBox cbSearchOptions;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox tbSearchAuthor;
+        private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.DataGridView dgvAuthors;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbBornDate;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -17,12 +17,20 @@ namespace MySQL
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ConnectDb, Configuration>());
             Database.Initialize(false);
             _dbConnection = dbConnection;
+            SetConfigurationEntitu();
         }
 
         public ConnectDb() : base(_dbConnection, false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ConnectDb, Configuration>());
             Database.Initialize(false);
+            SetConfigurationEntitu();
+        }
+
+        private void SetConfigurationEntitu()
+        {
+            Configuration.LazyLoadingEnabled = true;
+            Configuration.AutoDetectChangesEnabled = false;
         }
 
         public class MyContextFactory : IDbContextFactory<ConnectDb>

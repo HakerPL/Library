@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Library.Properties;
 using Library.Services;
 using Library.ViewModel;
+using MySQL.Entities;
 
 namespace Library.View
 {
@@ -18,7 +19,6 @@ namespace Library.View
             _viewModel = viewModel;
 
             cbBookType.DisplayMember = "Key";
-            ;
             cbBookType.ValueMember = "Value";
             cbBookType.DataSource = new BindingSource(EnumToDictionary.BookType(), null);
             cbBookType.SelectedIndex = 0;
@@ -50,6 +50,22 @@ namespace Library.View
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void btnBorrow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSetAuthor_Click(object sender, EventArgs e)
+        {
+            _viewModel.CourrnetAuthor = new Author();
+            AssignAuthorToBook assignAuthorToBook = new AssignAuthorToBook(_viewModel);
+
+            if (assignAuthorToBook.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
         }
     }
 }

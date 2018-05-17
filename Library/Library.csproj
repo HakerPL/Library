@@ -72,6 +72,18 @@
     <Compile Include="View\AllReadersViews.Designer.cs">
       <DependentUpon>AllReadersViews.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AssignAuthorToBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AssignAuthorToBook.Designer.cs">
+      <DependentUpon>AssignAuthorToBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BorrowBook.Designer.cs">
+      <DependentUpon>BorrowBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HistoryBookViews.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AllReadersViews.resx">
       <DependentUpon>AllReadersViews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AssignAuthorToBook.resx">
+      <DependentUpon>AssignAuthorToBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HistoryBookViews.resx">
       <DependentUpon>HistoryBookViews.cs</DependentUpon>

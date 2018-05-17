@@ -1,22 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using MySQL.Entities;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Library.Services;
 using Library.ViewModel;
-using MySQL.Entities;
 
 namespace Library.View
 {
-    public partial class AllAuthorView : UserControl
+    public partial class AssignAuthorToBook : Form
     {
         private readonly MainViewModel _mainViewModel;
         private readonly BindingSource _authorBinding;
 
-        public AllAuthorView(MainViewModel mainViewModel)
+        public AssignAuthorToBook(MainViewModel mainViewModel)
         {
             InitializeComponent();
-
-            dgvAuthors.AutoGenerateColumns = false;
-            cbSearchOptions.SelectedIndex = 0;
 
             _mainViewModel = mainViewModel;
             _authorBinding = new BindingSource
@@ -26,7 +24,15 @@ namespace Library.View
             dgvAuthors.DataSource = _authorBinding;
         }
 
-        private void btnAddAuthor_Click(object sender, System.EventArgs e)
+        private void tbSearchAuthor_TextChanged(object sender, EventArgs e)
+        {
+            if (tbSearchAuthor.Text.Length > 0)
+                SearchAuthor();
+            else
+                ShowAllAuthor();
+        }
+
+        private void btnAddAuthor_Click(object sender, EventArgs e)
         {
             _mainViewModel.CourrnetAuthor = new Author();
 
@@ -34,31 +40,26 @@ namespace Library.View
                 return;
 
             _mainViewModel.SaveAuthor.Execute(null);
-            _authorBinding.Add(_mainViewModel.CourrnetAuthor);
+
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private void btnEditAuthor_Click(object sender, System.EventArgs e)
+        private void dgvAuthors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!(_authorBinding.Current is Author courrent))
                 return;
 
             _mainViewModel.CourrnetAuthor = courrent;
 
-            if (!ShowAuthorView())
-                return;
-
-            _mainViewModel.SaveAuthor.Execute(null);
-            dgvAuthors.Refresh();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private void btnRemoveAuthor_Click(object sender, System.EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!(_authorBinding.Current is Author courrent))
-                return;
-
-            _mainViewModel.CourrnetAuthor = courrent;
-            _mainViewModel.RemoveAuthor.Execute(null);
-            _authorBinding.RemoveCurrent();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         /// <summary>
@@ -75,24 +76,6 @@ namespace Library.View
             }
 
             return true;
-        }
-
-        private void dgvAuthors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btnEditAuthor_Click(null, null);
-        }
-
-        private void btnSearchAuthor_Click(object sender, System.EventArgs e)
-        {
-            
-        }
-
-        private void tbSearchAuthor_TextChanged(object sender, System.EventArgs e)
-        {
-            if (tbSearchAuthor.Text.Length > 0)
-                SearchAuthor();
-            else
-                ShowAllAuthor();
         }
 
         private void SearchAuthor()

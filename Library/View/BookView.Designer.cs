@@ -144,6 +144,7 @@
             this.btnBorrow.TabIndex = 11;
             this.btnBorrow.Text = "Borrow";
             this.btnBorrow.UseVisualStyleBackColor = true;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // lblAuthor
             // 
@@ -169,8 +170,9 @@
             this.btnSetAuthor.Name = "btnSetAuthor";
             this.btnSetAuthor.Size = new System.Drawing.Size(156, 45);
             this.btnSetAuthor.TabIndex = 14;
-            this.btnSetAuthor.Text = "Borrow";
+            this.btnSetAuthor.Text = "Set Author";
             this.btnSetAuthor.UseVisualStyleBackColor = true;
+            this.btnSetAuthor.Click += new System.EventHandler(this.btnSetAuthor_Click);
             // 
             // BookView
             // 
