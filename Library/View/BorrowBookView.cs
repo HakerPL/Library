@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Library.Services;
 using Library.ViewModel;
@@ -6,12 +7,12 @@ using MySQL.Entities;
 
 namespace Library.View
 {
-    public partial class AllReadersViews : UserControl
+    public partial class BorrowBookView : Form
     {
         private readonly MainViewModel _mainViewModel;
         private readonly BindingSource _readerBinding;
 
-        public AllReadersViews(MainViewModel mainViewModel)
+        public BorrowBookView(MainViewModel mainViewModel)
         {
             InitializeComponent();
 
@@ -26,12 +27,15 @@ namespace Library.View
             dgvReaders.DataSource = _readerBinding;
         }
 
-        public void RefreshView()
+        private void tbSearchReader_TextChanged(object sender, EventArgs e)
         {
-            ShowAllReader();
+            if (tbSearchReader.Text.Length > 0)
+                SearchReader();
+            else
+                ShowAllReader();
         }
 
-        private void btnAddReader_Click(object sender, System.EventArgs e)
+        private void btnAddReader_Click(object sender, EventArgs e)
         {
             _mainViewModel.CourrnetReader = new Reader();
 
@@ -39,31 +43,26 @@ namespace Library.View
                 return;
 
             _mainViewModel.SaveReader.Execute(null);
-            _readerBinding.Add(_mainViewModel.CourrnetReader);
+
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private void btnEditReader_Click(object sender, System.EventArgs e)
+        private void dgvReaders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!(_readerBinding.Current is Reader courrent))
                 return;
 
             _mainViewModel.CourrnetReader = courrent;
 
-            if (!ShowReaderView())
-                return;
-
-            _mainViewModel.SaveReader.Execute(null);
-            dgvReaders.Refresh();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
-        private void btnRemoveReader_Click(object sender, System.EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (!(_readerBinding.Current is Reader courrent))
-                return;
-
-            _mainViewModel.CourrnetReader = courrent;
-            _mainViewModel.RemoveReader.Execute(null);
-            _readerBinding.RemoveCurrent();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         /// <summary>
@@ -80,19 +79,6 @@ namespace Library.View
             }
 
             return true;
-        }
-
-        private void dgvReaders_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btnEditReader_Click(null, null);
-        }
-
-        private void tbSearchReader_TextChanged(object sender, System.EventArgs e)
-        {
-            if (tbSearchReader.Text.Length > 0)
-                SearchReader();
-            else
-                ShowAllReader();
         }
 
         private void SearchReader()

@@ -64,6 +64,5 @@ namespace MySQL
         public virtual DbSet<Reader> Reader { get; set; }
         public virtual DbSet<Book> Book { get; set; }
         public virtual DbSet<BookHistory> BookHistory { get; set; }
-        public virtual DbSet<ReaderBorrowBook> ReaderBorrowBook { get; set; }
     }
 }

@@ -124,6 +124,7 @@
             this.Controls.Add(this.btnCancel);
             this.Name = "AuthorView";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Author";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,7 +1,6 @@
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AllAuthorView.resources
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AllReadersViews.resources
-E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.HistoryBookViews.resources
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AllBooksViews.resources
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.MainView.resources
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.Properties.Resources.resources
@@ -28,3 +27,5 @@ E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.exe
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.pdb
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AuthorView.resources
 E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.BookView.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.AssignAuthorToBook.resources
+E:\MojeProgramy\C#\Library\Library\obj\Debug\Library.View.BorrowBookView.resources

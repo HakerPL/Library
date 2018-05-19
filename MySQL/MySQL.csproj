@@ -66,10 +66,9 @@
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\BookHistory.cs" />
     <Compile Include="Entities\Reader.cs" />
-    <Compile Include="Entities\ReaderBorrowBook.cs" />
-    <Compile Include="Migrations\201805131516305_init.cs" />
-    <Compile Include="Migrations\201805131516305_init.Designer.cs">
-      <DependentUpon>201805131516305_init.cs</DependentUpon>
+    <Compile Include="Migrations\201805191838268_init.cs" />
+    <Compile Include="Migrations\201805191838268_init.Designer.cs">
+      <DependentUpon>201805191838268_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,7 +76,6 @@
     <Compile Include="Repositories\BookHistoryRepository.cs" />
     <Compile Include="Repositories\BookRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
-    <Compile Include="Repositories\ReaderBorrowBookRepository.cs" />
     <Compile Include="Repositories\ReaderRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,8 +83,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201805131516305_init.resx">
-      <DependentUpon>201805131516305_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201805191838268_init.resx">
+      <DependentUpon>201805191838268_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,7 +13,7 @@ namespace MySQL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201805131516305_init"; }
+            get { return "201805191838268_init"; }
         }
         
         string IMigrationMetadata.Source

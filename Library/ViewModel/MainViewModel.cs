@@ -193,6 +193,8 @@ namespace Library.ViewModel
 
         #endregion
 
+        public delegate void Refresh();
+        public Refresh RefreshView;
 
         public MainViewModel(){}
 
@@ -229,17 +231,12 @@ namespace Library.ViewModel
 
         public List<BookHistory> GetBookHistory(int bookId)
         {
-            return DiContainer.Container.Resolve<BookHistoryRepository>().Get(bookId);
+            return DiContainer.Container.Resolve<BookHistoryRepository>().GetBook(bookId);
         }
 
         public List<Reader> GetAllReaders()
         {
             return DiContainer.Container.Resolve<ReaderRepository>().GetAll();
-        }
-
-        public List<ReaderBorrowBook> GetReaderBorrowBooks()
-        {
-            return DiContainer.Container.Resolve<ReaderBorrowBookRepository>().GetAll();
         }
 
         #endregion

@@ -25,7 +25,7 @@ namespace MySQL.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Title = c.String(unicode: false),
                         Isbn = c.String(unicode: false),
-                        Type = c.Int(nullable: false),
+                        BookType = c.Int(nullable: false),
                         ReleaseDate = c.DateTime(nullable: false, precision: 0),
                         Borrowed = c.Boolean(nullable: false),
                         AuthorId = c.Int(nullable: false),
@@ -42,10 +42,13 @@ namespace MySQL.Migrations
                         BorrowedDate = c.DateTime(nullable: false, precision: 0),
                         ReturnDate = c.DateTime(nullable: false, precision: 0),
                         BookId = c.Int(nullable: false),
+                        ReaderId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Books", t => t.BookId, cascadeDelete: true)
-                .Index(t => t.BookId);
+                .ForeignKey("dbo.Readers", t => t.ReaderId, cascadeDelete: true)
+                .Index(t => t.BookId)
+                .Index(t => t.ReaderId);
             
             CreateTable(
                 "dbo.Readers",
@@ -58,33 +61,16 @@ namespace MySQL.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateTable(
-                "dbo.ReaderBorrowBooks",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        BookId = c.Int(nullable: false),
-                        ReaderId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Books", t => t.BookId, cascadeDelete: true)
-                .ForeignKey("dbo.Readers", t => t.ReaderId, cascadeDelete: true)
-                .Index(t => t.BookId)
-                .Index(t => t.ReaderId);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.ReaderBorrowBooks", "ReaderId", "dbo.Readers");
-            DropForeignKey("dbo.ReaderBorrowBooks", "BookId", "dbo.Books");
+            DropForeignKey("dbo.BookHistories", "ReaderId", "dbo.Readers");
             DropForeignKey("dbo.BookHistories", "BookId", "dbo.Books");
             DropForeignKey("dbo.Books", "AuthorId", "dbo.Authors");
-            DropIndex("dbo.ReaderBorrowBooks", new[] { "ReaderId" });
-            DropIndex("dbo.ReaderBorrowBooks", new[] { "BookId" });
+            DropIndex("dbo.BookHistories", new[] { "ReaderId" });
             DropIndex("dbo.BookHistories", new[] { "BookId" });
             DropIndex("dbo.Books", new[] { "AuthorId" });
-            DropTable("dbo.ReaderBorrowBooks");
             DropTable("dbo.Readers");
             DropTable("dbo.BookHistories");
             DropTable("dbo.Books");

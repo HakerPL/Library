@@ -28,7 +28,6 @@ namespace DiAutofac
             builder.RegisterType<AuthorRepository>().SingleInstance();
             builder.RegisterType<BookHistoryRepository>().SingleInstance();
             builder.RegisterType<BookRepository>().SingleInstance();
-            builder.RegisterType<ReaderBorrowBookRepository>().SingleInstance();
             builder.RegisterType<ReaderRepository>().SingleInstance();
             
 

@@ -36,12 +36,17 @@
             this.lblBornDate = new System.Windows.Forms.Label();
             this.dtbBornDate = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
+            this.dgvHistoryReader = new System.Windows.Forms.DataGridView();
+            this.clBookTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clBorrowDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoryReader)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(172, 134);
+            this.btnCancel.Location = new System.Drawing.Point(511, 442);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(156, 45);
             this.btnCancel.TabIndex = 0;
@@ -58,7 +63,7 @@
             // 
             // tbSurname
             // 
-            this.tbSurname.Location = new System.Drawing.Point(96, 59);
+            this.tbSurname.Location = new System.Drawing.Point(435, 23);
             this.tbSurname.Name = "tbSurname";
             this.tbSurname.Size = new System.Drawing.Size(232, 20);
             this.tbSurname.TabIndex = 3;
@@ -75,7 +80,7 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(7, 62);
+            this.lblSurname.Location = new System.Drawing.Point(346, 26);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(49, 13);
             this.lblSurname.TabIndex = 5;
@@ -84,7 +89,7 @@
             // lblBornDate
             // 
             this.lblBornDate.AutoSize = true;
-            this.lblBornDate.Location = new System.Drawing.Point(7, 98);
+            this.lblBornDate.Location = new System.Drawing.Point(7, 62);
             this.lblBornDate.Name = "lblBornDate";
             this.lblBornDate.Size = new System.Drawing.Size(53, 13);
             this.lblBornDate.TabIndex = 6;
@@ -92,7 +97,7 @@
             // 
             // dtbBornDate
             // 
-            this.dtbBornDate.Location = new System.Drawing.Point(96, 98);
+            this.dtbBornDate.Location = new System.Drawing.Point(96, 62);
             this.dtbBornDate.Name = "dtbBornDate";
             this.dtbBornDate.Size = new System.Drawing.Size(232, 20);
             this.dtbBornDate.TabIndex = 7;
@@ -101,7 +106,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(10, 134);
+            this.btnSave.Location = new System.Drawing.Point(349, 442);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(156, 45);
             this.btnSave.TabIndex = 8;
@@ -109,11 +114,54 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // dgvHistoryReader
+            // 
+            this.dgvHistoryReader.AllowUserToAddRows = false;
+            this.dgvHistoryReader.AllowUserToDeleteRows = false;
+            this.dgvHistoryReader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHistoryReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistoryReader.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clBookTitle,
+            this.clReturnDate,
+            this.clBorrowDate});
+            this.dgvHistoryReader.Location = new System.Drawing.Point(12, 88);
+            this.dgvHistoryReader.Name = "dgvHistoryReader";
+            this.dgvHistoryReader.ReadOnly = true;
+            this.dgvHistoryReader.Size = new System.Drawing.Size(655, 347);
+            this.dgvHistoryReader.TabIndex = 16;
+            // 
+            // clBookTitle
+            // 
+            this.clBookTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clBookTitle.DataPropertyName = "BookTitle";
+            this.clBookTitle.HeaderText = "Book Title";
+            this.clBookTitle.Name = "clBookTitle";
+            this.clBookTitle.ReadOnly = true;
+            // 
+            // clReturnDate
+            // 
+            this.clReturnDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clReturnDate.DataPropertyName = "ReturnDate";
+            this.clReturnDate.HeaderText = "Return Date";
+            this.clReturnDate.Name = "clReturnDate";
+            this.clReturnDate.ReadOnly = true;
+            // 
+            // clBorrowDate
+            // 
+            this.clBorrowDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clBorrowDate.DataPropertyName = "BorrowedDate";
+            this.clBorrowDate.HeaderText = "Borrow Date";
+            this.clBorrowDate.Name = "clBorrowDate";
+            this.clBorrowDate.ReadOnly = true;
+            // 
             // ReaderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 191);
+            this.ClientSize = new System.Drawing.Size(680, 499);
+            this.Controls.Add(this.dgvHistoryReader);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dtbBornDate);
             this.Controls.Add(this.lblBornDate);
@@ -124,7 +172,9 @@
             this.Controls.Add(this.btnCancel);
             this.Name = "ReaderView";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reader";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoryReader)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,5 +190,9 @@
         private System.Windows.Forms.Label lblBornDate;
         private System.Windows.Forms.DateTimePicker dtbBornDate;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridView dgvHistoryReader;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clBookTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clReturnDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clBorrowDate;
     }
 }

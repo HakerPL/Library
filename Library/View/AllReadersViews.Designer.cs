@@ -35,12 +35,10 @@
             this.btnAddReader = new System.Windows.Forms.Button();
             this.btnEditReader = new System.Windows.Forms.Button();
             this.btnRemoveReader = new System.Windows.Forms.Button();
-            this.btnSearchReader = new System.Windows.Forms.Button();
             this.tbSearchReader = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.cbSearchOptions = new System.Windows.Forms.ComboBox();
             this.lblSelectSearch = new System.Windows.Forms.Label();
-            this.btnShowAllReaders = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReaders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,22 +117,13 @@
             this.btnRemoveReader.UseVisualStyleBackColor = true;
             this.btnRemoveReader.Click += new System.EventHandler(this.btnRemoveReader_Click);
             // 
-            // btnSearchReader
-            // 
-            this.btnSearchReader.Location = new System.Drawing.Point(3, 112);
-            this.btnSearchReader.Name = "btnSearchReader";
-            this.btnSearchReader.Size = new System.Drawing.Size(135, 23);
-            this.btnSearchReader.TabIndex = 4;
-            this.btnSearchReader.Text = "Search";
-            this.btnSearchReader.UseVisualStyleBackColor = true;
-            this.btnSearchReader.Click += new System.EventHandler(this.btnSearchReader_Click);
-            // 
             // tbSearchReader
             // 
             this.tbSearchReader.Location = new System.Drawing.Point(3, 86);
             this.tbSearchReader.Name = "tbSearchReader";
             this.tbSearchReader.Size = new System.Drawing.Size(135, 20);
             this.tbSearchReader.TabIndex = 5;
+            this.tbSearchReader.TextChanged += new System.EventHandler(this.tbSearchReader_TextChanged);
             // 
             // lblSearch
             // 
@@ -165,26 +154,14 @@
             this.lblSelectSearch.TabIndex = 8;
             this.lblSelectSearch.Text = "Search after";
             // 
-            // btnShowAllReaders
-            // 
-            this.btnShowAllReaders.Location = new System.Drawing.Point(3, 141);
-            this.btnShowAllReaders.Name = "btnShowAllReaders";
-            this.btnShowAllReaders.Size = new System.Drawing.Size(135, 23);
-            this.btnShowAllReaders.TabIndex = 9;
-            this.btnShowAllReaders.Text = "Show all Readers";
-            this.btnShowAllReaders.UseVisualStyleBackColor = true;
-            this.btnShowAllReaders.Click += new System.EventHandler(this.btnShowAllReaders_Click);
-            // 
             // AllReadersViews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnShowAllReaders);
             this.Controls.Add(this.lblSelectSearch);
             this.Controls.Add(this.cbSearchOptions);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbSearchReader);
-            this.Controls.Add(this.btnSearchReader);
             this.Controls.Add(this.btnRemoveReader);
             this.Controls.Add(this.btnEditReader);
             this.Controls.Add(this.btnAddReader);
@@ -201,12 +178,10 @@
         private System.Windows.Forms.Button btnAddReader;
         private System.Windows.Forms.Button btnEditReader;
         private System.Windows.Forms.Button btnRemoveReader;
-        private System.Windows.Forms.Button btnSearchReader;
         private System.Windows.Forms.TextBox tbSearchReader;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ComboBox cbSearchOptions;
         private System.Windows.Forms.Label lblSelectSearch;
-        private System.Windows.Forms.Button btnShowAllReaders;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbBornDate;

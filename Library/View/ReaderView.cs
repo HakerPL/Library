@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Library.Model;
 using Library.ViewModel;
 
 namespace Library.View
@@ -15,6 +16,9 @@ namespace Library.View
 
             _viewModel = viewModel;
             BindingView();
+
+            if (_viewModel.CourrnetReader.Id > 0)
+                dgvHistoryReader.DataSource = ConvertBookHistoryToReaderDto.GetReaderHistory(_viewModel.CourrnetReader.Id);
         }
 
         private void BindingView()

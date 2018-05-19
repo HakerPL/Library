@@ -26,24 +26,9 @@ namespace Library.View
             dgvBooks.DataSource = _bookBinding;
         }
 
-        private void btnSearchBook_Click(object sender, System.EventArgs e)
+        public void RefreshView()
         {
-            List<Book> list;
-
-            if (cbSearchOptions.SelectedIndex == 0)
-                list = _mainViewModel.FiltrBook(FiltrBookMethod.TITLE, tbSearchBook.Text);
-            else
-                list = _mainViewModel.FiltrBook(FiltrBookMethod.ISBN, tbSearchBook.Text);
-
-            _bookBinding.DataSource = list;
-            dgvBooks.Refresh();
-        }
-
-        private void btnShowAllBooks_Click(object sender, System.EventArgs e)
-        {
-            tbSearchBook.Text = "";
-            _bookBinding.DataSource = _mainViewModel.GetAllBooks();
-            dgvBooks.Refresh();
+            ShowAllBook();
         }
 
         private void btnAddBook_Click(object sender, System.EventArgs e)
@@ -97,7 +82,34 @@ namespace Library.View
             return true;
         }
 
-        private void dgvBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tbSearchBook_TextChanged(object sender, System.EventArgs e)
+        {
+            if (tbSearchBook.Text.Length > 0)
+                SearchBook();
+            else
+                ShowAllBook();
+        }
+
+        private void SearchBook()
+        {
+            List<Book> list;
+
+            if (cbSearchOptions.SelectedIndex == 0)
+                list = _mainViewModel.FiltrBook(FiltrBookMethod.TITLE, tbSearchBook.Text);
+            else
+                list = _mainViewModel.FiltrBook(FiltrBookMethod.ISBN, tbSearchBook.Text);
+
+            _bookBinding.DataSource = list;
+            dgvBooks.Refresh();
+        }
+
+        private void ShowAllBook()
+        {
+            _bookBinding.DataSource = _mainViewModel.GetAllBooks();
+            dgvBooks.Refresh();
+        }
+
+        private void dgvBooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnEditBook_Click(null, null);
         }

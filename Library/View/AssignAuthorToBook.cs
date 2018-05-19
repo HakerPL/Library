@@ -16,6 +16,9 @@ namespace Library.View
         {
             InitializeComponent();
 
+            dgvAuthors.AutoGenerateColumns = false;
+            cbSearchOptions.SelectedIndex = 0;
+
             _mainViewModel = mainViewModel;
             _authorBinding = new BindingSource
             {

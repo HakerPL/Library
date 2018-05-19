@@ -48,7 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\BookHistoryDto.cs" />
+    <Compile Include="DTO\ReaderHistoryDto.cs" />
     <Compile Include="ICommand.cs" />
+    <Compile Include="Model\BorrowBook.cs" />
+    <Compile Include="Model\ConvertBookHistoryToReaderDto.cs" />
+    <Compile Include="Model\ConvertBookHistoryToBookDto.cs" />
+    <Compile Include="Model\ReturnBook.cs" />
     <Compile Include="Services\EnumToDictionary.cs" />
     <Compile Include="Services\FiltrAuthors.cs" />
     <Compile Include="Services\FiltrBooks.cs" />
@@ -78,17 +84,11 @@
     <Compile Include="View\AssignAuthorToBook.Designer.cs">
       <DependentUpon>AssignAuthorToBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\BorrowBook.cs">
+    <Compile Include="View\BorrowBookView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\BorrowBook.Designer.cs">
-      <DependentUpon>BorrowBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\HistoryBookViews.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\HistoryBookViews.Designer.cs">
-      <DependentUpon>HistoryBookViews.cs</DependentUpon>
+    <Compile Include="View\BorrowBookView.Designer.cs">
+      <DependentUpon>BorrowBookView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AllBooksViews.cs">
       <SubType>UserControl</SubType>
@@ -131,11 +131,11 @@
     <EmbeddedResource Include="View\AssignAuthorToBook.resx">
       <DependentUpon>AssignAuthorToBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\HistoryBookViews.resx">
-      <DependentUpon>HistoryBookViews.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\AllBooksViews.resx">
       <DependentUpon>AllBooksViews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BorrowBookView.resx">
+      <DependentUpon>BorrowBookView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
@@ -183,8 +183,6 @@
       <Name>MySQL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

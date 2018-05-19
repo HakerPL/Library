@@ -26,6 +26,11 @@ namespace Library.View
             dgvAuthors.DataSource = _authorBinding;
         }
 
+        public void RefreshView()
+        {
+            ShowAllAuthor();
+        }
+
         private void btnAddAuthor_Click(object sender, System.EventArgs e)
         {
             _mainViewModel.CourrnetAuthor = new Author();
@@ -80,11 +85,6 @@ namespace Library.View
         private void dgvAuthors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             btnEditAuthor_Click(null, null);
-        }
-
-        private void btnSearchAuthor_Click(object sender, System.EventArgs e)
-        {
-            
         }
 
         private void tbSearchAuthor_TextChanged(object sender, System.EventArgs e)

@@ -42,12 +42,19 @@
             this.lblAuthor = new System.Windows.Forms.Label();
             this.tbAuthor = new System.Windows.Forms.TextBox();
             this.btnSetAuthor = new System.Windows.Forms.Button();
+            this.dgvHistoryBook = new System.Windows.Forms.DataGridView();
+            this.clReaderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clReturnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clBorrowDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblHistory = new System.Windows.Forms.Label();
+            this.btnReturnBook = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoryBook)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(494, 135);
+            this.btnCancel.Location = new System.Drawing.Point(494, 505);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(156, 45);
             this.btnCancel.TabIndex = 0;
@@ -107,7 +114,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(332, 135);
+            this.btnSave.Location = new System.Drawing.Point(332, 505);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(156, 45);
             this.btnSave.TabIndex = 8;
@@ -138,11 +145,11 @@
             // btnBorrow
             // 
             this.btnBorrow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrow.Location = new System.Drawing.Point(8, 135);
+            this.btnBorrow.Location = new System.Drawing.Point(8, 505);
             this.btnBorrow.Name = "btnBorrow";
             this.btnBorrow.Size = new System.Drawing.Size(156, 45);
             this.btnBorrow.TabIndex = 11;
-            this.btnBorrow.Text = "Borrow";
+            this.btnBorrow.Text = "Borrow Book";
             this.btnBorrow.UseVisualStyleBackColor = true;
             this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
@@ -166,7 +173,7 @@
             // btnSetAuthor
             // 
             this.btnSetAuthor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSetAuthor.Location = new System.Drawing.Point(170, 135);
+            this.btnSetAuthor.Location = new System.Drawing.Point(170, 505);
             this.btnSetAuthor.Name = "btnSetAuthor";
             this.btnSetAuthor.Size = new System.Drawing.Size(156, 45);
             this.btnSetAuthor.TabIndex = 14;
@@ -174,11 +181,77 @@
             this.btnSetAuthor.UseVisualStyleBackColor = true;
             this.btnSetAuthor.Click += new System.EventHandler(this.btnSetAuthor_Click);
             // 
+            // dgvHistoryBook
+            // 
+            this.dgvHistoryBook.AllowUserToAddRows = false;
+            this.dgvHistoryBook.AllowUserToDeleteRows = false;
+            this.dgvHistoryBook.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHistoryBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistoryBook.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clReaderName,
+            this.clReturnDate,
+            this.clBorrowDate});
+            this.dgvHistoryBook.Location = new System.Drawing.Point(8, 151);
+            this.dgvHistoryBook.Name = "dgvHistoryBook";
+            this.dgvHistoryBook.ReadOnly = true;
+            this.dgvHistoryBook.Size = new System.Drawing.Size(642, 348);
+            this.dgvHistoryBook.TabIndex = 15;
+            // 
+            // clReaderName
+            // 
+            this.clReaderName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clReaderName.DataPropertyName = "ReaderName";
+            this.clReaderName.HeaderText = "Reader Name";
+            this.clReaderName.Name = "clReaderName";
+            this.clReaderName.ReadOnly = true;
+            // 
+            // clReturnDate
+            // 
+            this.clReturnDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clReturnDate.DataPropertyName = "ReturnDate";
+            this.clReturnDate.HeaderText = "Return Date";
+            this.clReturnDate.Name = "clReturnDate";
+            this.clReturnDate.ReadOnly = true;
+            // 
+            // clBorrowDate
+            // 
+            this.clBorrowDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clBorrowDate.DataPropertyName = "BorrowedDate";
+            this.clBorrowDate.HeaderText = "Borrow Date";
+            this.clBorrowDate.Name = "clBorrowDate";
+            this.clBorrowDate.ReadOnly = true;
+            // 
+            // lblHistory
+            // 
+            this.lblHistory.AutoSize = true;
+            this.lblHistory.Location = new System.Drawing.Point(7, 135);
+            this.lblHistory.Name = "lblHistory";
+            this.lblHistory.Size = new System.Drawing.Size(39, 13);
+            this.lblHistory.TabIndex = 16;
+            this.lblHistory.Text = "History";
+            // 
+            // btnReturnBook
+            // 
+            this.btnReturnBook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReturnBook.Location = new System.Drawing.Point(8, 505);
+            this.btnReturnBook.Name = "btnReturnBook";
+            this.btnReturnBook.Size = new System.Drawing.Size(156, 45);
+            this.btnReturnBook.TabIndex = 17;
+            this.btnReturnBook.Text = "Return Book";
+            this.btnReturnBook.UseVisualStyleBackColor = true;
+            this.btnReturnBook.Visible = false;
+            this.btnReturnBook.Click += new System.EventHandler(this.btnReturnBook_Click);
+            // 
             // BookView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 192);
+            this.ClientSize = new System.Drawing.Size(662, 562);
+            this.Controls.Add(this.btnReturnBook);
+            this.Controls.Add(this.lblHistory);
+            this.Controls.Add(this.dgvHistoryBook);
             this.Controls.Add(this.btnSetAuthor);
             this.Controls.Add(this.tbAuthor);
             this.Controls.Add(this.lblAuthor);
@@ -195,7 +268,9 @@
             this.Controls.Add(this.btnCancel);
             this.Name = "BookView";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reader";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoryBook)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +292,11 @@
         private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.TextBox tbAuthor;
         private System.Windows.Forms.Button btnSetAuthor;
+        private System.Windows.Forms.DataGridView dgvHistoryBook;
+        private System.Windows.Forms.Label lblHistory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clReaderName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clReturnDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clBorrowDate;
+        private System.Windows.Forms.Button btnReturnBook;
     }
 }

@@ -30,7 +30,6 @@
         {
             this.pView = new System.Windows.Forms.Panel();
             this.btnBooks = new System.Windows.Forms.Button();
-            this.btnHistoryBooks = new System.Windows.Forms.Button();
             this.btnReaders = new System.Windows.Forms.Button();
             this.btnAuthors = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -50,27 +49,17 @@
             // 
             this.btnBooks.Location = new System.Drawing.Point(12, 12);
             this.btnBooks.Name = "btnBooks";
-            this.btnBooks.Size = new System.Drawing.Size(258, 42);
+            this.btnBooks.Size = new System.Drawing.Size(345, 42);
             this.btnBooks.TabIndex = 1;
             this.btnBooks.Text = "Books";
             this.btnBooks.UseVisualStyleBackColor = true;
             this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
-            // btnHistoryBooks
-            // 
-            this.btnHistoryBooks.Location = new System.Drawing.Point(276, 12);
-            this.btnHistoryBooks.Name = "btnHistoryBooks";
-            this.btnHistoryBooks.Size = new System.Drawing.Size(258, 42);
-            this.btnHistoryBooks.TabIndex = 2;
-            this.btnHistoryBooks.Text = "History Book";
-            this.btnHistoryBooks.UseVisualStyleBackColor = true;
-            this.btnHistoryBooks.Click += new System.EventHandler(this.btnHistoryBooks_Click);
-            // 
             // btnReaders
             // 
-            this.btnReaders.Location = new System.Drawing.Point(540, 12);
+            this.btnReaders.Location = new System.Drawing.Point(363, 12);
             this.btnReaders.Name = "btnReaders";
-            this.btnReaders.Size = new System.Drawing.Size(258, 42);
+            this.btnReaders.Size = new System.Drawing.Size(345, 42);
             this.btnReaders.TabIndex = 3;
             this.btnReaders.Text = "Readers";
             this.btnReaders.UseVisualStyleBackColor = true;
@@ -78,9 +67,9 @@
             // 
             // btnAuthors
             // 
-            this.btnAuthors.Location = new System.Drawing.Point(804, 12);
+            this.btnAuthors.Location = new System.Drawing.Point(715, 12);
             this.btnAuthors.Name = "btnAuthors";
-            this.btnAuthors.Size = new System.Drawing.Size(258, 42);
+            this.btnAuthors.Size = new System.Drawing.Size(345, 42);
             this.btnAuthors.TabIndex = 4;
             this.btnAuthors.Text = "Authors";
             this.btnAuthors.UseVisualStyleBackColor = true;
@@ -93,11 +82,12 @@
             this.ClientSize = new System.Drawing.Size(1072, 508);
             this.Controls.Add(this.btnAuthors);
             this.Controls.Add(this.btnReaders);
-            this.Controls.Add(this.btnHistoryBooks);
             this.Controls.Add(this.btnBooks);
             this.Controls.Add(this.pView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainView";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library";
             this.ResumeLayout(false);
 
@@ -107,7 +97,6 @@
 
         private System.Windows.Forms.Panel pView;
         private System.Windows.Forms.Button btnBooks;
-        private System.Windows.Forms.Button btnHistoryBooks;
         private System.Windows.Forms.Button btnReaders;
         private System.Windows.Forms.Button btnAuthors;
     }
